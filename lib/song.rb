@@ -62,7 +62,6 @@ class Song
     song = self.new
     song_array[0] = song.name
     song_array[1] = song.artist_name
-
   end
 
   def self.create_from_filename
