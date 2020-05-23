@@ -16,7 +16,7 @@ class Song
     song
   end
 
-  
+
   # Build a class constructor `Song.new_by_name` that takes in the string name of a
   # song and returns a song instance with that name set as its name property.
   # `Song.new_by_name` should return an instance of `Song` and not a simple string
@@ -31,5 +31,5 @@ class Song
     song.save
     song
   end
-    
+
 end
