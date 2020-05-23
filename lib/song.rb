@@ -41,15 +41,14 @@ class Song
   # create a new song with the name and return the song instance.
 
   def self.find_or_create_by_name(string_name)
-    self.find_by_name
-    # no_dups = self.all.detect {|s| s.name == string_name}
-    if self.find_by_name == nil
+    no_dups = self.all.detect {|s| s.name == string_name}
+    if no_dups == nil
       song = self.new
       song.name = string_name
       song.save
       song
     else
-      self.find_by_name
+      no_dups
     end
   end
 
