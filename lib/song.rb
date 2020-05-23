@@ -10,11 +10,6 @@ class Song
     self.class.all << self
   end
 
-  # Build a class constructor `Song.create` that initializes a song and saves it to
-  # the `@@all` class variable either literally or through the class method
-  # `Song.all`. This method should return the song instance that was initialized and
-  # saved.
-
   def self.create
     song= self.new
     song.save
