@@ -55,13 +55,23 @@ class Song
   # be parsed for the relevant components. Separate the artist name from the rest of
   # the data based on the `-` delimiter. Don't forget that when you parse the song
   # name, you have to remove the `'.mp3'` part of the string.
+  #
+  # def self.new_from_filename(filename)
+  #   song_array = filename.split(" - ")
+  #   song_array[1] = song_array[1].chomp(".mp3")
+  #   song = self.new
+  #   song.name = song_array[0]
+  #   song.artist_name = song_array[1]
+  #   song
+  # end
+
 
   def self.new_from_filename(filename)
     song_array = filename.split(" - ")
     song_array[1] = song_array[1].chomp(".mp3")
     song = self.new
-    song.name = song_array[0]
-    song.artist_name = song_array[1]
+    song.name = song_array[1]
+    song.artist_name = song_array[0]
     song
   end
 
