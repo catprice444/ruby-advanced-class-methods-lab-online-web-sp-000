@@ -39,7 +39,10 @@ class Song
   # ```
 
   def self.create_by_name(string_name)
-
+    song = self.new
+    song.name = string_name
+    song.save
+    song
   end
 
   def self.find_by_name
