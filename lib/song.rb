@@ -15,10 +15,10 @@ class Song
   # `Song.all`. This method should return the song instance that was initialized and
   # saved.
 
-  def self.create(name)
-    song = self.new
-    song.name = name
-    @@all << song
+  def self.create
+    s= self.new
+    s.save
+    s
   end
 
 end
