@@ -30,8 +30,19 @@ class Song
     song
   end
 
-  def self.find_by_name
-    
+# Build a class finder `Song.find_by_name` that accepts the string name of a song
+# and returns the matching instance of the song with that name. Consider:
+# 
+# ```ruby
+# the_middle = Song.create_by_name("The Middle")
+# #=> #<Song @name="The Middle">
+# 
+# Song.find_by_name("The Middle")
+# #<Song @name="The Middle">
+
+  def self.find_by_name(string_name)
+    self.all.detect {|s| s.name == string_name}
+
   end
 
   def self.find_or_create_by_name
