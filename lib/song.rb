@@ -44,11 +44,11 @@ class Song
     no_dups = self.find_by_name
     # all.detect {|s| s.name == string_name}
     if no_dups == nil
-      self.create_by_name
-      # song = self.new
-      # song.name = string_name
-      # song.save
-      # song
+      # self.create_by_name
+      song = self.new
+      song.name = string_name
+      song.save
+      song
     else
       self.create_by_name
     end
